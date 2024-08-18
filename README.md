@@ -122,6 +122,53 @@ No further action was required, as the situation was already effectively handled
 <details>
   <summary>Possible Privilege Escalation</summary>
   
-  This is the second example.
+ Incident Summary
+On February 16, 2023, an alert was triggered by the Security Information and Event Management (SIEM) system indicating a potential privilege escalation within the Azure environment. The alert flagged suspicious activity involving the user account josh.madakorgmail.onmicrosoft.com, which had accessed critical credentials in the Azure Key Vault multiple times and was associated with several other high-risk actions, including password resets and the assignment of global administrator roles.
+
+Upon further investigation, it was determined that the actions were legitimate and performed by the account owner as part of their normal duties. The incident was corroborated with the account owner and their manager, leading to the closure of the alert.
+
+Investigation and Analysis
+Initial Assignment:
+
+The incident was promptly assigned for investigation. An initial overview of the alert was taken, focusing on the entities involved and the potential scope of the incident
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/2ff5b1c2-624d-497b-a2ae-b2568dfe94df"80%" width="80%" alt="NSGALLOW"/>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/b08ba064-74c5-4c91-893e-55c5f41883b7"80%" width="80%" alt="NSGALLOW"/>
+
+Related Alerts:
+
+During the investigation, it was discovered that the user had been involved in multiple other security alerts, including excessive password resets and the assignment of global administrator privileges. This raised concerns about possible lateral movement within the network
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3f4167ab-a145-424d-ae02-4051c81b345d"height="80%" width="80%" alt="NSGALLOW"/>
+
+
+Direct Communication:
+
+The security team reached out to the account owner to verify the legitimacy of the activities. The account owner confirmed that the actions were part of their regular duties. This was further corroborated by their manager, who confirmed the legitimacy of the activities (see screenshot "Close Ticket").
+Conclusion:
+
+The incident was classified as a false positive due to inaccurate data. The actions taken by the user were legitimate, and the alert was closed following confirmation from both the user and their manager.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/396ff738-4f6d-4ae6-a873-c7ef61d9df57"height="80%" width="80%" alt="NSGALLOW"/>
+
+
+
+Final Report
+Date: February 16, 2023
+Incident: Possible Privilege Escalation in Azure Key Vault
+Outcome: False Positive - Inaccurate Data
+
+Details:
+The SIEM alert indicated potential privilege escalation by the user account josh.madakorgmail.onmicrosoft.com. The investigation revealed that the user had accessed critical credentials multiple times and was involved in several high-risk activities, including password resets and the assignment of global administrator roles. After direct communication with the user and corroboration with their manager, it was confirmed that these activities were legitimate and part of the user's normal duties. The alert was closed as a false positive.
+
+Remediation:
+No further action was required, as the activities were authorized. The incident was documented, and the alert was closed to prevent unnecessary escalation.
+
+
 
 </details>
