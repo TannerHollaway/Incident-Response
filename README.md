@@ -106,7 +106,9 @@ Final Report:
 
 Date: March 15, 2023
 Time: 03:14 PM
+
 Incident: Possible Malware Outbreak on windows-vm
+
 Outcome: False Positive
 
 Details:
