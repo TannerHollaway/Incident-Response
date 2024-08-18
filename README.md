@@ -19,6 +19,7 @@ Investigation and Analysis
 Preparation:
 
 Custom detection and logging rules were configured in Microsoft Sentinel, ensuring that all brute force attempts were captured and sent to the Log Analytics Workspace for analysis.
+
 Detection:
 
 The SIEM alert indicated a successful brute force attempt, which prompted immediate investigation. Initial indicators included a high volume of failed login attempts (over 600) followed by a single successful logon from an IP address outside the expected geographic region.
@@ -36,12 +37,16 @@ Containment:
 Immediate actions were taken to prevent further attempts, including adjusting the Network Security Group (NSG) rules to restrict inbound traffic solely to known, trusted IP addresses.
 A detailed review of the NSG settings was conducted to ensure no similar traffic could bypass the firewall in the future. (Usually this first goes through the Change Management Process where you would first file an RFC, or a Request For Change)
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/d15bb91a-a544-4a1d-87b6-f26bdd1bbae0" height="80%" width="80%" alt="NSGALLOW"/>
+
 Conclusion:
 
 The incident was ultimately classified as a false positive. However, the investigation highlighted the importance of robust firewall and NSG configurations to prevent such occurrences.
 
 
-Final Report
+Final Report:
+
 Date: August 12, 2024
 Time: 12:03 PM
 Incident: Brute Force Alert on windows-vm
@@ -52,8 +57,6 @@ The alert was triggered by a service account anomaly, resulting in an erroneous 
 
 Remediation:
 The NSG rules were hardened to block all unauthorized traffic, limiting access to a specific, trusted IP range. These measures will help prevent similar false positives in the future and ensure that only legitimate traffic can reach the Azure VMs.
-
-This revised content provides a more polished and professional tone while keeping the technical details intact. It also organizes the information logically, making it easier for others to understand your investigation and response process. If you need any additional revisions or have more content to add, feel free to ask!
 
 </details>
 
